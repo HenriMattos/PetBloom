@@ -1,11 +1,11 @@
 {
     "name": "PetBloom",
     "short_name": "PetBloom",
-    "description": "PetBloom - Produtos ecológicos e serviços de qualidade para seu pet.",
+    "description": "PetBloom - Produtos ecológicos e serviços premium para seu pet.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#f0fff4",
-    "theme_color": "#16a34a",
+    "theme_color": "#2f855a",
     "icons": [
         {
             "src": "assets/icons/icon-192x192.png",
@@ -14,6 +14,14 @@
         },
         {
             "src": "assets/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "splash_screens": [
+        {
+            "src": "assets/icons/splash-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }

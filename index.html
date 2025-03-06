@@ -3,43 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PetBloom - Produtos ecológicos e serviços de qualidade para seu pet. Descubra acessórios, banho, tosa e mais!">
-    <meta name="keywords" content="produtos para pets, acessórios ecológicos, banho e tosa, pet care">
+    <meta name="description" content="PetBloom - Produtos ecológicos e serviços premium para seu pet. Acessórios, banho, tosa e mais!">
+    <meta name="keywords" content="produtos para pets, acessórios ecológicos, banho e tosa, pet care, pet shop online">
     <meta name="author" content="Seu Nome">
-    <title>PetBloom - Cuide do seu pet com amor</title>
-
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="PetBloom - Cuide do seu pet com amor">
+    <meta property="og:description" content="Produtos ecológicos e serviços premium para o bem-estar do seu pet.">
+    <meta property="og:image" content="https://petbloom.vercel.app/assets/images/pet-hero.jpg">
+    <meta property="og:url" content="https://petbloom.vercel.app">
+    <meta property="og:type" content="website">
+    <!-- Preload Recursos -->
+    <link rel="preload" href="assets/images/pet-hero.jpg" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    <!-- Favicon -->
     <link rel="icon" href="assets/icons/favicon.ico">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilo Customizado -->
     <link rel="stylesheet" href="styles.css">
-
+    <!-- Manifest para PWA -->
     <link rel="manifest" href="/manifest.json">
+    <title>PetBloom - Cuide do seu pet com amor</title>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <nav class="container nav">
+        <div class="container nav">
             <h1 class="logo">PetBloom</h1>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#destaques">Destaques</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="parallax-bg"></div>
         <div class="container hero-content">
             <div class="hero-text">
                 <h2>Cuide do seu pet com amor</h2>
-                <p>Produtos ecológicos e serviços de qualidade para o bem-estar do seu melhor amigo.</p>
-                <a href="#produtos" class="btn">Descubra agora</a>
-            </div>
-            <div class="hero-image">
-                <img src="assets/images/pet-hero.jpg" alt="Cachorro feliz com brinquedo">
+                <p>Produtos ecológicos e serviços premium para o bem-estar do seu melhor amigo.</p>
+                <a href="#destaques" class="btn">Descubra agora</a>
+                <button id="install-btn" class="btn secondary" style="display: none;">Instalar PetBloom</button>
             </div>
         </div>
     </section>
@@ -48,29 +61,44 @@
     <section id="sobre" class="sobre">
         <div class="container">
             <h3>Sobre a PetBloom</h3>
-            <p>Na PetBloom, acreditamos que os pets merecem o melhor. Nossos produtos são ecológicos e nossos serviços, como banho e tosa, são realizados com carinho e profissionalismo.</p>
+            <p>Na PetBloom, nossa missão é oferecer o melhor para os pets com produtos sustentáveis e serviços de alta qualidade. Cuidamos do seu amigo com o mesmo amor que você.</p>
         </div>
     </section>
 
-    <!-- Produtos -->
-    <section id="produtos" class="produtos">
+    <!-- Produtos em Destaque -->
+    <section id="destaques" class="destaques">
         <div class="container">
-            <h3>Nossos Produtos</h3>
+            <h3>Produtos em Destaque</h3>
+            <div class="filter-buttons">
+                <button data-filter="all" class="filter-btn active">Todos</button>
+                <button data-filter="brinquedos" class="filter-btn">Brinquedos</button>
+                <button data-filter="acessorios" class="filter-btn">Acessórios</button>
+                <button data-filter="alimentacao" class="filter-btn">Alimentação</button>
+            </div>
             <div class="grid">
-                <div class="card">
-                    <img src="assets/images/brinquedo.jpg" alt="Brinquedo ecológico">
-                    <h4>Brinquedo Ecológico</h4>
-                    <p>Feito de materiais reciclados, perfeito para horas de diversão.</p>
+                <div class="card" data-category="brinquedos" itemscope itemtype="http://schema.org/Product">
+                    <img src="assets/images/brinquedo.jpg" alt="Brinquedo ecológico" loading="lazy">
+                    <h4 itemprop="name">Brinquedo Ecológico</h4>
+                    <p itemprop="description">Feito de materiais reciclados, perfeito para diversão.</p>
+                    <button class="details-btn">Ver Detalhes</button>
+                    <meta itemprop="price" content="29.90">
+                    <meta itemprop="priceCurrency" content="BRL">
                 </div>
-                <div class="card">
-                    <img src="assets/images/coleira.jpg" alt="Coleira personalizada">
-                    <h4>Coleira Personalizada</h4>
-                    <p>Estilosa e confortável, com o nome do seu pet gravado.</p>
+                <div class="card" data-category="acessorios" itemscope itemtype="http://schema.org/Product">
+                    <img src="assets/images/coleira.jpg" alt="Coleira personalizada" loading="lazy">
+                    <h4 itemprop="name">Coleira Personalizada</h4>
+                    <p itemprop="description">Estilosa e confortável, com o nome do seu pet.</p>
+                    <button class="details-btn">Ver Detalhes</button>
+                    <meta itemprop="price" content="39.90">
+                    <meta itemprop="priceCurrency" content="BRL">
                 </div>
-                <div class="card">
-                    <img src="assets/images/racao.jpg" alt="Ração natural">
-                    <h4>Ração Natural</h4>
-                    <p>Alimentação saudável sem aditivos artificiais.</p>
+                <div class="card" data-category="alimentacao" itemscope itemtype="http://schema.org/Product">
+                    <img src="assets/images/racao.jpg" alt="Ração natural" loading="lazy">
+                    <h4 itemprop="name">Ração Natural</h4>
+                    <p itemprop="description">Alimentação saudável sem aditivos artificiais.</p>
+                    <button class="details-btn">Ver Detalhes</button>
+                    <meta itemprop="price" content="59.90">
+                    <meta itemprop="priceCurrency" content="BRL">
                 </div>
             </div>
         </div>
@@ -81,15 +109,18 @@
         <div class="container">
             <h3>Nossos Serviços</h3>
             <div class="grid">
-                <div class="service-item">
+                <div class="service-item" aria-label="Serviço de Banho e Tosa">
+                    <i class="fas fa-bath service-icon"></i>
                     <h4>Banho e Tosa</h4>
-                    <p>Deixe seu pet limpo e cheiroso com nosso cuidado especial.</p>
+                    <p>Cuidado especial para deixar seu pet limpo e cheiroso.</p>
                 </div>
-                <div class="service-item">
+                <div class="service-item" aria-label="Serviço de Consulta Veterinária">
+                    <i class="fas fa-stethoscope service-icon"></i>
                     <h4>Consulta Veterinária</h4>
-                    <p>Atendimento profissional para a saúde do seu melhor amigo.</p>
+                    <p>Atendimento profissional para a saúde do seu pet.</p>
                 </div>
-                <div class="service-item">
+                <div class="service-item" aria-label="Serviço de Passeios Diários">
+                    <i class="fas fa-paw service-icon"></i>
                     <h4>Passeios Diários</h4>
                     <p>Exercícios e diversão para pets cheios de energia.</p>
                 </div>
@@ -101,15 +132,34 @@
     <section id="depoimentos" class="depoimentos">
         <div class="container">
             <h3>O que dizem nossos clientes</h3>
-            <div class="grid">
-                <div class="testimonial">
-                    <p class="quote">"Meu cachorro adora os brinquedos da PetBloom! São resistentes e ecológicos."</p>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <p class="quote">"Os brinquedos da PetBloom são incríveis e sustentáveis!"</p>
                     <p class="author">— Ana S.</p>
                 </div>
-                <div class="testimonial">
-                    <p class="quote">"O serviço de banho e tosa é incrível, meu gato nunca esteve tão feliz!"</p>
+                <div class="carousel-item">
+                    <p class="quote">"Meu gato ama o banho e tosa, recomendo muito!"</p>
                     <p class="author">— João P.</p>
                 </div>
+                <div class="carousel-item">
+                    <p class="quote">"Produtos de qualidade e entrega rápida!"</p>
+                    <p class="author">— Maria L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h3>Perguntas Frequentes</h3>
+            <div class="faq-item">
+                <h4 class="faq-question">Os produtos são realmente ecológicos?</h4>
+                <p class="faq-answer">Sim! Usamos materiais reciclados e biodegradáveis.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-question">Como agendar um serviço?</h4>
+                <p class="faq-answer">Use o formulário de contato ou ligue para nós!</p>
             </div>
         </div>
     </section>
@@ -118,10 +168,19 @@
     <section id="contato" class="contato">
         <div class="container">
             <h3>Entre em Contato</h3>
-            <form class="contact-form">
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="E-mail" required>
-                <textarea placeholder="Mensagem" required></textarea>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Nome" required aria-label="Seu nome">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="E-mail" required aria-label="Seu e-mail">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Mensagem" required aria-label="Sua mensagem"></textarea>
+                    <span class="error-message"></span>
+                </div>
                 <button type="submit">Enviar</button>
             </form>
         </div>
@@ -133,15 +192,30 @@
             <p>© 2023 PetBloom. Todos os direitos reservados.</p>
             <div class="footer-links">
                 <a href="#home">Home</a>
-                <a href="#produtos">Produtos</a>
+                <a href="#destaques">Destaques</a>
                 <a href="#servicos">Serviços</a>
                 <a href="#contato">Contato</a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Modal para Detalhes do Produto -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="Produto">
+            <h4 id="modal-title"></h4>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+        </div>
+    </div>
 
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" title="Voltar ao topo"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Service Worker para PWA -->
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/service-worker.js')

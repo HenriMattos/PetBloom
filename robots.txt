@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://petbloom.vercel.app/sitemap.xml
