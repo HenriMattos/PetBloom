@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PetBloom - Produtos ecológicos e serviços de qualidade para seu pet. Descubra acessórios, banho, tosa e mais!">
+    <meta name="keywords" content="produtos para pets, acessórios ecológicos, banho e tosa, pet care">
+    <meta name="author" content="Seu Nome">
+    <title>PetBloom - Cuide do seu pet com amor</title>
+
+    <link rel="icon" href="assets/icons/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <h1 class="logo">PetBloom</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2>Cuide do seu pet com amor</h2>
+                <p>Produtos ecológicos e serviços de qualidade para o bem-estar do seu melhor amigo.</p>
+                <a href="#produtos" class="btn">Descubra agora</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/pet-hero.jpg" alt="Cachorro feliz com brinquedo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h3>Sobre a PetBloom</h3>
+            <p>Na PetBloom, acreditamos que os pets merecem o melhor. Nossos produtos são ecológicos e nossos serviços, como banho e tosa, são realizados com carinho e profissionalismo.</p>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h3>Nossos Produtos</h3>
+            <div class="grid">
+                <div class="card">
+                    <img src="assets/images/brinquedo.jpg" alt="Brinquedo ecológico">
+                    <h4>Brinquedo Ecológico</h4>
+                    <p>Feito de materiais reciclados, perfeito para horas de diversão.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/coleira.jpg" alt="Coleira personalizada">
+                    <h4>Coleira Personalizada</h4>
+                    <p>Estilosa e confortável, com o nome do seu pet gravado.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/racao.jpg" alt="Ração natural">
+                    <h4>Ração Natural</h4>
+                    <p>Alimentação saudável sem aditivos artificiais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h3>Nossos Serviços</h3>
+            <div class="grid">
+                <div class="service-item">
+                    <h4>Banho e Tosa</h4>
+                    <p>Deixe seu pet limpo e cheiroso com nosso cuidado especial.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Consulta Veterinária</h4>
+                    <p>Atendimento profissional para a saúde do seu melhor amigo.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Passeios Diários</h4>
+                    <p>Exercícios e diversão para pets cheios de energia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="depoimentos">
+        <div class="container">
+            <h3>O que dizem nossos clientes</h3>
+            <div class="grid">
+                <div class="testimonial">
+                    <p class="quote">"Meu cachorro adora os brinquedos da PetBloom! São resistentes e ecológicos."</p>
+                    <p class="author">— Ana S.</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"O serviço de banho e tosa é incrível, meu gato nunca esteve tão feliz!"</p>
+                    <p class="author">— João P.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h3>Entre em Contato</h3>
+            <form class="contact-form">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 PetBloom. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(reg => console.log('Service Worker registrado', reg))
+                .catch(err => console.log('Erro ao registrar Service Worker', err));
+        }
+    </script>
+</body>
+</html>
