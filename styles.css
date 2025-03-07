@@ -87,7 +87,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     background: linear-gradient(to bottom, #f0fff4, #c6f6d5);
@@ -100,16 +100,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('assets/images/pet-hero.jpg') no-repeat center/cover;
+    background: url('assets/images/pet-hero-4.jpg') no-repeat center/cover;
 }
 
 .hero-content {
     position: relative;
-    text-align: right; /* Alinha o texto à direita */
+    text-align: left; /* Alinha o texto à direita */
     padding: 2rem;
     max-width: 1280px; /* Mantém consistência com o container */
-    margin-left: auto; /* Garante que o conteúdo fique à direita */
-    margin-right: 0;
+    margin-left: 0; /* Garante que o conteúdo fique à direita */
+    margin-right: auto;
 }
 
 .hero-text h2 {
@@ -120,15 +120,15 @@ body {
     background: #48bb78;
     margin-bottom: 1.5rem;
     display: inline-block; /* Garante que o fundo siga o texto */
-    text-align: right; /* Redundante, mas reforça o alinhamento */
+    text-align: left; /* Redundante, mas reforça o alinhamento */
 }
 
 .hero-text p {
     font-size: 1.5rem;
-    color: #555;
+    color: #ffffff;
     max-width: 600px;
-    margin: 0 0 2rem auto; /* Alinha à direita com margem automática à esquerda */
-    text-align: right; /* Alinha o texto à direita */
+    margin: 0 0 2rem 0; /* Alinha à direita com margem automática à esquerda */
+    text-align: left; /* Alinha o texto à direita */
 }
 
 .btn {
@@ -162,7 +162,7 @@ body {
 .sobre h3 {
     font-size: 2.8rem;
     font-weight: 700;
-    color: #2f855a;
+    color: #48bb78;
     margin-bottom: 2rem;
 }
 
@@ -183,23 +183,31 @@ body {
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
-    color: #2f855a;
+    color: #48bb78;
     margin-bottom: 2rem;
 }
 
 .filter-buttons {
     text-align: center;
-    margin-bottom: 3rem;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .filter-btn {
     background: #e2e8f0;
+    color: #567c66;
     border: none;
     padding: 0.75rem 1.5rem;
     margin: 0 0.5rem;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: bold;
     transition: background 0.3s, color 0.3s;
 }
 
@@ -262,8 +270,8 @@ body {
 }
 
 .details-btn:hover {
-    background: #276749;
-    transform: scale(1.05);
+    background: #ffa722;
+    transform: scale(1.01);
 }
 
 /* Serviços */
@@ -276,7 +284,7 @@ body {
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
-    color: #2f855a;
+    color: #48bb78;
     margin-bottom: 3rem;
 }
 
@@ -292,13 +300,13 @@ body {
 
 .service-icon {
     font-size: 3rem;
-    color: #2f855a;
+    color: #48bb78;
     margin-bottom: 1.5rem;
     transition: color 0.3s;
 }
 
 .service-item:hover .service-icon {
-    color: #48bb78;
+    color: #ffa722;
 }
 
 .service-item h4 {
@@ -314,7 +322,7 @@ body {
 
 /* Depoimentos */
 .depoimentos {
-    background: linear-gradient(to bottom, #f0fff4, #c6f6d5);
+    background:#ffa722;
     padding: 6rem 0;
 }
 
@@ -322,7 +330,7 @@ body {
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
-    color: #2f855a;
+    color: #ffffff;
     margin-bottom: 3rem;
 }
 
@@ -371,7 +379,7 @@ body {
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
-    color: #2f855a;
+    color: #48bb78;
     margin-bottom: 3rem;
 }
 
@@ -432,7 +440,7 @@ body {
     font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 2.5rem;
-    color: #2f855a;
+    color: #48bb78;
 }
 
 .contact-form {
@@ -492,7 +500,7 @@ body {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #2f855a, #48bb78);
+    background: #48bb78;
     color: white;
     padding: 4rem 0;
     text-align: center;
@@ -514,7 +522,6 @@ body {
     color: #f0fff4;
 }
 
-/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -531,7 +538,7 @@ body {
 .modal-content {
     background: white;
     border-radius: 20px;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 500px;
     width: 90%;
     text-align: center;
@@ -542,6 +549,7 @@ body {
 .modal-content img {
     width: 100%;
     height: 300px;
+    top: 0px;
     object-fit: cover;
     border-radius: 15px;
     margin-bottom: 1.5rem;
@@ -549,11 +557,20 @@ body {
 
 .close-modal {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0px;
+    right: 0px;
     font-size: 2rem;
     cursor: pointer;
-    color: #666;
+    padding: 0px 10px;
+    border-radius: 0px 15px 0px 15px;
+    background-color: #ff4e4e;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.close-modal:hover {
+    background-color: #ff3434;
+    transition: 0.5s;
 }
 
 .modal-content h4 {
@@ -567,12 +584,11 @@ body {
     font-size: 1.1rem;
 }
 
-/* Botão Voltar ao Topo */
 #back-to-top {
     position: fixed;
     bottom: 3rem;
     right: 3rem;
-    background: linear-gradient(135deg, #2f855a, #48bb78);
+    background:#48bb78;
     color: white;
     border: none;
     border-radius: 50%;
@@ -584,7 +600,6 @@ body {
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 #back-to-top.visible {
@@ -637,6 +652,52 @@ body {
 
     .card img {
         height: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 0.5rem;
+        color: #333;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none;
     }
 }
 

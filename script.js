@@ -1,5 +1,4 @@
-// Inicializar EmailJS
-emailjs.init("your_user_id"); // Substitua pelo seu User ID do EmailJS
+emailjs.init("PetBloom"); // User ID do EmailJS
 
 // Formulário de Contato com Validação
 document.getElementById('contact-form').addEventListener('submit', function (e) {
@@ -10,7 +9,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     const message = document.getElementById('message');
     let isValid = true;
 
-    // Resetar mensagens de erro
     document.querySelectorAll('.error-message').forEach(msg => msg.textContent = '');
 
     // Validação
@@ -42,7 +40,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     }
 });
 
-// Carrossel de Depoimentos
+// Carrossel
 const carouselItems = document.querySelectorAll('.carousel-item');
 let currentIndex = 0;
 
@@ -60,7 +58,7 @@ function nextSlide() {
 showSlide(currentIndex);
 setInterval(nextSlide, 5000);
 
-// FAQ Interativo
+// FAQ
 document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
         const answer = question.nextElementSibling;
@@ -69,7 +67,6 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
 });
 
-// Botão Voltar ao Topo
 const backToTopBtn = document.getElementById('back-to-top');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 400) {
@@ -124,7 +121,6 @@ modal.addEventListener('click', (e) => {
     if (e.target === modal) modal.style.display = 'none';
 });
 
-// Efeito Parallax no Hero
 window.addEventListener('scroll', () => {
     const parallax = document.querySelector('.parallax-bg');
     const scrollPosition = window.scrollY;
@@ -154,9 +150,13 @@ installBtn.addEventListener('click', () => {
     }
 });
 
-// Fade-in ao carregar
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('section').forEach(section => {
-        section.classList.add('fade-in');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        const isExpanded = navLinks.classList.contains('active');
+        menuToggle.setAttribute('aria-expanded', isExpanded);
     });
 });

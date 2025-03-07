@@ -12,18 +12,17 @@
     <meta property="og:image" content="https://petbloom.vercel.app/assets/images/pet-hero.jpg">
     <meta property="og:url" content="https://petbloom.vercel.app">
     <meta property="og:type" content="website">
-    <!-- Preload Recursos -->
-    <link rel="preload" href="assets/images/pet-hero.jpg" as="image">
+
     <link rel="preload" href="styles.css" as="style">
-    <!-- Favicon -->
+
     <link rel="icon" href="assets/icons/favicon.ico">
-    <!-- Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Estilo Customizado -->
+
     <link rel="stylesheet" href="styles.css">
-    <!-- Manifest para PWA -->
+
     <link rel="manifest" href="/manifest.json">
     <title>PetBloom - Cuide do seu pet com amor</title>
 </head>
@@ -35,7 +34,7 @@
             <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#destaques">Destaques</a></li>
                 <li><a href="#servicos">Serviços</a></li>
@@ -77,7 +76,7 @@
             </div>
             <div class="grid">
                 <div class="card" data-category="brinquedos" itemscope itemtype="http://schema.org/Product">
-                    <img src="assets/images/brinquedo.jpg" alt="Brinquedo ecológico" loading="lazy">
+                    <img src="assets/images/brinquedo-dog-1.jpg" alt="Brinquedo ecológico" loading="lazy">
                     <h4 itemprop="name">Brinquedo Ecológico</h4>
                     <p itemprop="description">Feito de materiais reciclados, perfeito para diversão.</p>
                     <button class="details-btn">Ver Detalhes</button>
@@ -85,7 +84,7 @@
                     <meta itemprop="priceCurrency" content="BRL">
                 </div>
                 <div class="card" data-category="acessorios" itemscope itemtype="http://schema.org/Product">
-                    <img src="assets/images/coleira.jpg" alt="Coleira personalizada" loading="lazy">
+                    <img src="assets/images/coleira-dog.jpg" alt="Coleira personalizada" loading="lazy">
                     <h4 itemprop="name">Coleira Personalizada</h4>
                     <p itemprop="description">Estilosa e confortável, com o nome do seu pet.</p>
                     <button class="details-btn">Ver Detalhes</button>
@@ -93,7 +92,7 @@
                     <meta itemprop="priceCurrency" content="BRL">
                 </div>
                 <div class="card" data-category="alimentacao" itemscope itemtype="http://schema.org/Product">
-                    <img src="assets/images/racao.jpg" alt="Ração natural" loading="lazy">
+                    <img src="assets/images/racao-dog.jpg" alt="Ração natural" loading="lazy">
                     <h4 itemprop="name">Ração Natural</h4>
                     <p itemprop="description">Alimentação saudável sem aditivos artificiais.</p>
                     <button class="details-btn">Ver Detalhes</button>
