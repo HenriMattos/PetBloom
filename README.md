@@ -27,4 +27,4 @@ PetBloom is a solution for small pet care businesses looking to enhance their on
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/petbloom.git
+   git clone https://github.com/HenriMattos/petbloom.git
