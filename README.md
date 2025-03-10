@@ -1,6 +1,6 @@
 # PetBloom
 
-![PetBloom Logo](https://via.placeholder.com/150) <!-- Substitua por um logo real -->
+![PetBloom Logo](logo.png)
 
 PetBloom é uma landing page de estudo otimizada para SEO e PWA, criada para uma empresa fictícia que vende produtos e serviços para pets, com foco em bem-estar animal. A página promove acessórios ecológicos, serviços como banho e tosa, e oferece uma experiência instalável em dispositivos móveis.
 
