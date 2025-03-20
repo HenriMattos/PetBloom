@@ -19,9 +19,7 @@ PetBloom is a solution for small pet care businesses looking to enhance their on
 ## 🛠 Technologies Used
 
 - HTML5, CSS3, JavaScript
-- Tailwind CSS (for styling)
-- Workbox (for PWA)
-- Google Lighthouse (for optimization)
+- Tailwind CSS
 
 ## 🚀 How to Run the Project Locally
 
