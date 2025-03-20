@@ -6,7 +6,7 @@ PetBloom is a study landing page optimized for SEO and PWA, created for a fictio
 
 ## 📋 Description
 
-PetBloom is a solution for small pet care businesses looking to enhance their online presence. With optimized SEO, the page helps attract local customers (e.g., "best pet accessories in [city]"), and PWA support allows users to access the catalog offline or install the site as an app.
+PetBloom is a solution for small pet care businesses looking to enhance their online presence. With optimized SEO, the page helps attract local customers, and PWA support allows users to access the catalog offline or install the site as an app.
 
 ## ✨ Features
 
