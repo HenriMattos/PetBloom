@@ -117,7 +117,6 @@ body {
     font-weight: 700;
     color: #ffffff;
     padding: 5px;
-    background: #48bb78;
     margin-bottom: 1.5rem;
     display: inline-block; /* Garante que o fundo siga o texto */
     text-align: left; /* Redundante, mas reforça o alinhamento */
@@ -171,6 +170,12 @@ body {
     margin: 0 auto;
     font-size: 1.2rem;
     color: #666;
+}
+
+.logo-sobre {
+    display: block;
+    margin: 0 auto 5px;
+    width: 250px; /* Ajusta o tamanho máximo da imagem */
 }
 
 /* Produtos em Destaque */

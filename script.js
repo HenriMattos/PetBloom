@@ -131,23 +131,33 @@ window.addEventListener('scroll', () => {
 let deferredPrompt;
 const installBtn = document.getElementById('install-btn');
 
+// Detecta o evento beforeinstallprompt
 window.addEventListener('beforeinstallprompt', (e) => {
+    // Impede que o prompt padrão seja exibido
     e.preventDefault();
     deferredPrompt = e;
-    installBtn.style.display = 'inline-block';
-});
+    // Exibe o botão de instalação
+    installBtn.style.display = 'block';
 
-installBtn.addEventListener('click', () => {
-    if (deferredPrompt) {
+    installBtn.addEventListener('click', () => {
+        // Exibe o prompt de instalação
         deferredPrompt.prompt();
+        // Verifica a escolha do usuário
         deferredPrompt.userChoice.then((choiceResult) => {
             if (choiceResult.outcome === 'accepted') {
-                console.log('Usuário aceitou instalar o PWA');
+                console.log('Usuário aceitou a instalação');
+            } else {
+                console.log('Usuário recusou a instalação');
             }
             deferredPrompt = null;
-            installBtn.style.display = 'none';
         });
-    }
+    });
+});
+
+// Oculta o botão se o app já estiver instalado
+window.addEventListener('appinstalled', () => {
+    console.log('App instalado com sucesso!');
+    installBtn.style.display = 'none';
 });
 
 document.addEventListener('DOMContentLoaded', function() {
